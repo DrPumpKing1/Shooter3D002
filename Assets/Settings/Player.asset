@@ -25,10 +25,19 @@ MonoBehaviour:
     m_Bits: 1024
   maxSlopeAngle: 60
   acceleration: 10
-  maxSpeed: 15
-  groundFriction: 1.5
+  groundFriction: 2.5
   airFriction: 3.5
   slopeSnapForce: 5
   jumpForce: 5
+  coyoteTime: 0.2
   jumpCooldown: 0.65
   fallMultiplier: 1.5
+  velocityExtraJumpForce: 0.5
+  crouchSpeedMultiplier: 0.5
+  crouchHeightMultiplier: 0.45
+  crouchTransitionTime: 0.6
+  walkMaxSpeed: 12.5
+  runMaxSpeed: 20
+  crouchMaxSpeed: 7.5
+  maxSpeedTransitionDuration: 2.5
+  maxSpeedDiffThreshold: 2.5

@@ -21,13 +21,28 @@ public class Settings : ScriptableObject
 
     [Header("Movement")]
     public float acceleration;
-    public float maxSpeed;
     public float groundFriction;
     public float airFriction;
     public float slopeSnapForce;
 
     [Header("Jump")]
     public float jumpForce;
+    public float coyoteTime;
     public float jumpCooldown;
     public float fallMultiplier;
+    public float velocityExtraJumpForce;
+    public float crouchSpeedMultiplier;
+
+    [Header("Crouch")]
+    public float crouchHeightMultiplier;
+    public float crouchTransitionTime;
+
+    [Header("Sprint")]
+    public float walkMaxSpeed;
+    public float runMaxSpeed;
+    public float crouchMaxSpeed;
+
+    [Header("Speed Transition")]
+    public float maxSpeedTransitionDuration;
+    public float maxSpeedDiffThreshold;
 }

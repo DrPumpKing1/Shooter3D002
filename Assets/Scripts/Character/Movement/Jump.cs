@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Jump : Feature
 {
-    public override int Order() => 175;
+    public override int Order() => 100;
 
     public override void UpdateFeature()
     {
@@ -29,9 +29,13 @@ public class Jump : Feature
 
     private void JumpAction()
     {
-        if(invoker.jumpCooldown.IsRunning || !invoker.OnGround) return;
+        if(invoker.jumpCooldown.IsRunning || Time.time - invoker.LastGroundTime > settings.coyoteTime) return;
 
-        invoker.AddImpulse(Vector3.up * settings.jumpForce);
+        float extraJumpForce = new Vector3(invoker.Velocity.x, 0f, invoker.Velocity.z).magnitude * settings.velocityExtraJumpForce;
+        float jumpForce = settings.jumpForce + extraJumpForce;
+        if(invoker.IsCrouching) jumpForce *= settings.crouchSpeedMultiplier;
+
+        invoker.AddImpulse(Vector3.up * jumpForce);
         invoker.ExitingSlope = true;
         invoker.jumpCooldown.Start();
     }

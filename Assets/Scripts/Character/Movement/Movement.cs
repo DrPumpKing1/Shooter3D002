@@ -36,9 +36,9 @@ public class Movement : Feature
             velocity.y = 0f;
         }
 
-        if (velocity.sqrMagnitude > settings.maxSpeed * settings.maxSpeed)
+        if (velocity.sqrMagnitude > invoker.maxSpeed * invoker.maxSpeed)
         {
-            velocity = velocity.normalized * settings.maxSpeed;
+            velocity = velocity.normalized * invoker.maxSpeed;
         }
 
         if (!invoker.OnSlope || invoker.ExitingSlope)

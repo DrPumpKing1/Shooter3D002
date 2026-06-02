@@ -19,6 +19,8 @@ GameObject:
   - component: {fileID: 7141839847024126119}
   - component: {fileID: 6388597157238907685}
   - component: {fileID: 8991835008785418137}
+  - component: {fileID: 923913247326774462}
+  - component: {fileID: 2512435572038499897}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -222,3 +224,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cfce43ff6c80f44b59da86a11eace3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jump
+--- !u!114 &923913247326774462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990236142662845113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbae78b522e3924aa24dbbfce0bccbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Crouch
+--- !u!114 &2512435572038499897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990236142662845113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a850148fb548c45b5d465e53681a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sprint

@@ -18,6 +18,9 @@ public class Invoker
 
         settings = controller.settings;
         jumpCooldown = new(settings.jumpCooldown);
+        crouchTranstion = new(settings.crouchTransitionTime);
+
+        maxSpeed = settings.walkMaxSpeed;
     }
 
     public Vector3 Position
@@ -112,4 +115,8 @@ public class Invoker
     public Vector3 SlopeNormal;
     public bool ExitingSlope;
     public Timer jumpCooldown;
+    public bool IsCrouching;
+    public Timer crouchTranstion;
+    public float maxSpeed;
+    public bool IsRunning;
 }
